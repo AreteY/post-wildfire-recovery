@@ -18,3 +18,4 @@ We study the post-wildfire vegetation change for the Chimney Tops 2 Fire using a
 3. LandFire Condition Class Grid (https://landfire.gov/fireregime.php)
 4. NASA VIIRS Fire Detection (https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/viirs-i-band-active-fire-data)
 # Workflow
+<img src="graphics/workflow.png" width="100%">
