@@ -78,6 +78,7 @@ A secondary classification using LiDAR data can be made based on steepness of sl
 Workflow A
 * The vegetation indices of any NEON Airborne Observation Platform Hyperspectral Reflectance hdf5 file could be calculated by Workflow A. This could include the [NEON spectrometer orthorectified surface directional reflectance - mosaic data product](https://data.neonscience.org/data-products/DP3.30006.001) used in this workflow and the [NEON spectrometer orthorectified surface directional reflectance - flightline](https://data.neonscience.org/data-products/DP1.30006.001) data product.
 * In addition, any boundary shapefile for the Reflectance hdf5 file could also be plotted together in Matplotlib using the [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) `vegetation_indices.ipynb`.
+
 Workflow B
 * A given area analyzed by Workflow A (typically 1 km^2 tile), or selected independently, can be analyzed in Workflow B to reclassify the area at 1-m spatial resolution by slope, aspect and at 30-m by fuels conditions into areas of expected theoretical fire intensity.  
 
