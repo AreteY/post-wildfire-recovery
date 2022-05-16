@@ -85,4 +85,4 @@ Workflow B
 * A given area analyzed by Workflow A (typically 1 km^2 tile), or selected independently, can be analyzed in Workflow B to reclassify the area at 1-m spatial resolution by slope, aspect and at 30-m by fuels conditions into areas of expected theoretical fire intensity.  
 
 # License
-The post-wildfire-recovery project is under the MIT License.
+The post-wildfire-recovery project is under the [MIT License](https://github.com/AreteY/post-wildfire-recovery/blob/main/LICENSE.md).
