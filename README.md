@@ -86,3 +86,7 @@ Workflow B
 
 # License
 The post-wildfire-recovery project is under the [MIT License](https://github.com/AreteY/post-wildfire-recovery/blob/main/LICENSE.md).
+
+# Zenodo Citation
+[![DOI](https://zenodo.org/badge/485825368.svg)](https://zenodo.org/badge/latestdoi/485825368)
+
