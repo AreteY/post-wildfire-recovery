@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/485825368.svg)](https://zenodo.org/badge/latestdoi/485825368)
+
 # Post-Wildfire Recovery
 This is a collaborative Earth Lab Certificate project by [Eric Gottlieb](https://github.com/esgeo) and [Heidi Yoon](https://github.com/AreteY) studying post-wildfire recovery.
 
@@ -9,9 +11,9 @@ This is a collaborative Earth Lab Certificate project by [Eric Gottlieb](https:/
 For more background about our project, please see our blog post and its figures in the [Reports folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/reports) and the [Graphics folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/graphics) (`blog-figure1-3.png` and `ig-raws.png`, `ig-raws-rose.png`, `ig-raws-rose-gust.png`), respectively.
 
 # Project Environment
-To install and run the python environment for this project, please use the instructions below.
+To run our project workflow, clone this repository and install the python environment described below.
 ## Installing and Running the Environment
-1. Download the file `neon-environment.yml` from this repository, which contains instructions on how to install the environment, into this directory.
+1. Download the file `neon-environment.yml` from this repository, which contains instructions on how to install the environment, into the project directory.
 2. Create the environment by running: `conda env create -f neon-environment.yml`.
 3. Once the environment is installed, activate it by running: `conda activate earth-analytics-neon`.
 
@@ -28,6 +30,14 @@ To install and run the python environment for this project, please use the instr
 * rioxarray (Workflow B only)
 * gdal (Workflow B only)
 * richdem (Workflow B only)
+
+# Project Background
+To learn more about our project, please see our blog post `post_wildfire_blog.ipynb` notebook and its figures in the [Reports folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/reports) and the [Graphics folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/graphics) (`blog-figure1-3.png` and `ig-raws.png`, `ig-raws-rose.png`, `ig-raws-rose-gust.png`), respectively.
+
+To create the final `post_wildfire_blog.html` output, make sure you are in the `reports` directory within `post-wildfire-recovery` and run the following bash script.
+```
+$ jupyter nbconvert --to html --TemplateExporter.exclude_input=True post_wildfire_blog.ipynb
+```
 
 # Data Sources
 Raster data
@@ -86,7 +96,3 @@ Workflow B
 
 # License
 The post-wildfire-recovery project is under the [MIT License](https://github.com/AreteY/post-wildfire-recovery/blob/main/LICENSE.md).
-
-# Zenodo Citation
-[![DOI](https://zenodo.org/badge/485825368.svg)](https://zenodo.org/badge/latestdoi/485825368)
-
