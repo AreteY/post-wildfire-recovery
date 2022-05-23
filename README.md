@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/485825368.svg)](https://zenodo.org/badge/latestdoi/485825368)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6574445.svg)](https://doi.org/10.5281/zenodo.6574445)
 
 # Post-Wildfire Recovery
 This is a collaborative Earth Lab Certificate project by [Eric Gottlieb](https://github.com/esgeo) and [Heidi Yoon](https://github.com/AreteY) studying post-wildfire recovery.
