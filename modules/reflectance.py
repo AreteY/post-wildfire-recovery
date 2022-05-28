@@ -1,5 +1,39 @@
+import os
+import requests
 import numpy as np
 import h5py
+
+def download_file(file_path, url):
+    """Downloads a file from a url and writes file into specified path.
+
+    The function checks if the file has already been downloaded. If the
+    file exists, then the function reads the file; otherwise the
+    function downloads and writes the file.
+
+    Parameters
+    ----------
+    file_path: str
+        Relative path to downloaded file.
+
+    url: str
+        A URL to fetch the file.
+
+    Returns
+    -------
+    data: file
+        Downloaded data file.
+    """
+    if not os.path.exists(file_path):
+        # Download and save data if needed
+        r = requests.get(url)
+        with open(file_path, 'wb') as data_file:
+            data_file.write(r.content)
+            data = r.content
+    else:
+        # Read cached data
+        with open(file_path, 'rb') as data_file:
+            data = data_file.read()
+    return data
 
 def aop_h5refl2array(refl_filename):
     """Reads in a hdf5 file and returns an array and select metadata.
