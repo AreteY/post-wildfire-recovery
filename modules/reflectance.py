@@ -12,16 +12,16 @@ def download_file(file_path, url):
 
     Parameters
     ----------
-    file_path: str
-        Relative path to downloaded file.
+    file_path : str
+       Relative path to downloaded file.
 
-    url: str
-        A URL to fetch the file.
+    url : str
+       A URL to fetch the file.
 
     Returns
     -------
-    data: file
-        Downloaded data file.
+    data : bytes
+       Downloaded data file.
     """
     if not os.path.exists(file_path):
         # Download and save data if needed
@@ -34,6 +34,33 @@ def download_file(file_path, url):
         with open(file_path, 'rb') as data_file:
             data = data_file.read()
     return data
+
+def calc_norm_diff(band1, band2):
+    """Calculates the normalized difference using two reflectance bands.
+
+    When using a near-infrared band and a shortwave-infrared band as
+    band 1 and band 2, respectively, the function calculates the
+    normalized burn ratio. When using a near-infrared band and a red
+    band as band 1 and band 2, respectively, the function calculates the
+    normalized difference vegetation index.
+
+    Parameters
+    ----------
+    band1 : numpy.ndarray
+       A near-infrared reflectance band.
+    band2 : numpy.ndarray
+       A shortwave-infrared or red reflectance band.
+
+    Returns
+    -------
+    norm_diff : numpy.ndarray
+       A normalized difference band array.
+    """
+    if band1.shape == band2.shape:
+        norm_diff = (band1 - band2) / (band1 + band2)
+        return norm_diff
+    else:
+        print('Band 1 does not have the same shape as Band 2.')
 
 def aop_h5refl2array(refl_filename):
     """Reads in a hdf5 file and returns an array and select metadata.
