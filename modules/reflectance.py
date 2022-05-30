@@ -60,7 +60,7 @@ def calc_norm_diff(band1, band2):
         norm_diff = (band1 - band2) / (band1 + band2)
         return norm_diff
     else:
-        print('Band 1 does not have the same shape as Band 2.')
+        raise ValueError('Band 1 does not have the same shape as Band 2.')
 
 def aop_h5refl2array(refl_filename):
     """Reads in a hdf5 file and returns an array and select metadata.
