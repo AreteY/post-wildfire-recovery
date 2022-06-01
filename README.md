@@ -62,12 +62,9 @@ $ jupyter nbconvert --to html --TemplateExporter.exclude_input=True post_wildfir
 * **Reference:** NEON (National Ecological Observatory Network). Plant presence and percent cover (DP1.10058.001), RELEASE-2022. https://doi.org/10.48443/pr5e-1q60. Dataset accessed from https://data.neonscience.org on April 18, 2022.
 
 # Project Workflow
-The workflow of the project is shown below.
-
 <img src="graphics/workflow.png" width="100%">
-
 The project workflow is a vegetation recovery analysis in which the vegetation recovery of an 1-km<sup>2</sup> area within the burn perimeter can be evaluated first by calculating vegetation indices ([NBR: normalized burn ratio](https://www.earthdatascience.org/courses/use-data-open-source-python/multispectral-remote-sensing/vegetation-indices-in-python/), [NDVI: normalized difference vegetation index](https://www.earthdatascience.org/courses/use-data-open-source-python/multispectral-remote-sensing/vegetation-indices-in-python/), [MSAVI: modified soil adjusted vegetation index](https://www.sciencedirect.com/science/article/pii/0034425794901341)). Then the index that can best discriminate between unburned and burned areas is determined by the [random forests algorithm](https://link.springer.com/article/10.1023/A:1010933404324). Finally, [multiple endmember spectral band analysis](https://www.sciencedirect.com/science/article/pii/S0034425798000376?via%3Dihub) is used to classify the vegetation at a sub-pixel level into green growth [green], standing dead or dormant vegetation [deadwood], or burned areas [char].
-## Run Project Workflow
+## Run Workflow
 * Run the [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks)  `vegetation_indices.ipynb` to calculate the vegetation indices using a downloaded reflectance file and to plot the results using matplotlib and earthpy. To open `vegetation_indices.ipynb` with Jupyter Notebook, make sure you are in the `notebooks` directory within `post-wildfire-recovery`. Run the following bash script to start the notebook server in your default web browser:
 ```
 $ jupyter notebook vegetation_indices.ipynb
