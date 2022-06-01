@@ -38,8 +38,10 @@ $ conda activate earth-analytics-neon
 # Project Background
 To learn more about our project, please see our blog post `post_wildfire_blog.ipynb` notebook and its figures in the [Reports folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/reports) and the [Graphics folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/graphics) (`blog-figure1-3.png` and `ig-raws.png`, `ig-raws-rose.png`, `ig-raws-rose-gust.png`), respectively.
 
-To create the final `post_wildfire_blog.html` output, make sure you are in the `reports` directory within `post-wildfire-recovery` and run the following bash script.
+To create the final `post_wildfire_blog.html` output, start the project environment (if needed) and make sure you are in the `reports` directory within `post-wildfire-recovery`. Then run jupyter nbconvert for the `post_wildfire_blog.html` output.
 ```
+$ conda activate earth-analytics-neon
+$ cd reports
 $ jupyter nbconvert --to html --TemplateExporter.exclude_input=True post_wildfire_blog.ipynb
 ```
 
@@ -76,7 +78,7 @@ $ jupyter nbconvert --to html --TemplateExporter.exclude_input=True post_wildfir
 
 The project workflow is a vegetation recovery analysis in which the vegetation recovery of an 1-km<sup>2</sup> area within the burn perimeter can be evaluated first by calculating vegetation indices ([NBR: normalized burn ratio](https://www.earthdatascience.org/courses/use-data-open-source-python/multispectral-remote-sensing/vegetation-indices-in-python/), [NDVI: normalized difference vegetation index](https://www.earthdatascience.org/courses/use-data-open-source-python/multispectral-remote-sensing/vegetation-indices-in-python/), [MSAVI: modified soil adjusted vegetation index](https://www.sciencedirect.com/science/article/pii/0034425794901341)). Then the index that can best discriminate between unburned and burned areas is determined by the [random forests algorithm](https://link.springer.com/article/10.1023/A:1010933404324). Finally, [multiple endmember spectral band analysis](https://www.sciencedirect.com/science/article/pii/S0034425798000376?via%3Dihub) is used to classify the vegetation at a sub-pixel level into green growth [green], standing dead or dormant vegetation [deadwood], or burned areas [char].
 ## Run Workflow
-* Run the [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks)  `vegetation_indices.ipynb` to calculate the vegetation indices using a downloaded reflectance file and to plot the results using matplotlib and earthpy. First, start the project environment. Next, make sure you are in the `notebooks` directory within `post-wildfire-recovery`. Then use Jupyter Notebook to open `vegetation_indices.ipynb` in your default web browser.
+* Run the [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks)  `vegetation_indices.ipynb` to calculate the vegetation indices using a downloaded reflectance file and to plot the results using matplotlib and earthpy. First, start the project environment if needed. Next, make sure you are in the `notebooks` directory within `post-wildfire-recovery`. Then use Jupyter Notebook to open `vegetation_indices.ipynb` in your default web browser.
 ```
 $ conda activate earth-analytics-neon
 $ cd notebooks
