@@ -9,11 +9,21 @@ This is an [Earth Lab](https://earthlab.colorado.edu) Certificate project by [He
 * In this repository, we include [example notebooks](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) that process and analyze hyperspectral reflectance data to assess post-wildfire recovery.
 
 # Project Environment
-To run our project workflow, clone this repository and install the python environment described below.
+To run our project workflow, clone this repository:
+```
+$ git clone https://github.com/AreteY/post-wildfire-recovery.git
+```
+Then install the python environment described below.
 ## Installing and Running the Environment
-1. Download the file `neon-environment.yml` from this repository, which contains instructions on how to install the environment, into the project directory.
-2. Create the environment by running: `conda env create -f neon-environment.yml`.
-3. Once the environment is installed, activate it by running: `conda activate earth-analytics-neon`.
+1. Download the file `neon-environment.yml` from this repository, which contains instructions on how to install the environment, into the project directory `post-wildfire-recovery`.
+2. Create the environment by running:
+```
+$ conda env create -f neon-environment.yml
+```
+3. Once the environment is installed, activate it by running:
+```
+$ conda activate earth-analytics-neon
+```
 
 # Tools and Packages Used
 * os
@@ -66,8 +76,10 @@ $ jupyter nbconvert --to html --TemplateExporter.exclude_input=True post_wildfir
 
 The project workflow is a vegetation recovery analysis in which the vegetation recovery of an 1-km<sup>2</sup> area within the burn perimeter can be evaluated first by calculating vegetation indices ([NBR: normalized burn ratio](https://www.earthdatascience.org/courses/use-data-open-source-python/multispectral-remote-sensing/vegetation-indices-in-python/), [NDVI: normalized difference vegetation index](https://www.earthdatascience.org/courses/use-data-open-source-python/multispectral-remote-sensing/vegetation-indices-in-python/), [MSAVI: modified soil adjusted vegetation index](https://www.sciencedirect.com/science/article/pii/0034425794901341)). Then the index that can best discriminate between unburned and burned areas is determined by the [random forests algorithm](https://link.springer.com/article/10.1023/A:1010933404324). Finally, [multiple endmember spectral band analysis](https://www.sciencedirect.com/science/article/pii/S0034425798000376?via%3Dihub) is used to classify the vegetation at a sub-pixel level into green growth [green], standing dead or dormant vegetation [deadwood], or burned areas [char].
 ## Run Workflow
-* Run the [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks)  `vegetation_indices.ipynb` to calculate the vegetation indices using a downloaded reflectance file and to plot the results using matplotlib and earthpy. To open `vegetation_indices.ipynb` with Jupyter Notebook, make sure you are in the `notebooks` directory within `post-wildfire-recovery`. Run the following bash script to start the notebook server in your default web browser:
+* Run the [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks)  `vegetation_indices.ipynb` to calculate the vegetation indices using a downloaded reflectance file and to plot the results using matplotlib and earthpy. First, start the project environment. Next, make sure you are in the `notebooks` directory within `post-wildfire-recovery`. Then use Jupyter Notebook to open `vegetation_indices.ipynb` in your default web browser.
 ```
+$ conda activate earth-analytics-neon
+$ cd notebooks
 $ jupyter notebook vegetation_indices.ipynb
 ```
 
