@@ -1,5 +1,7 @@
+import io
 import os
 import requests
+import zipfile
 import numpy as np
 import h5py
 
@@ -35,6 +37,40 @@ def download_file(file_path, url):
             data = data_file.read()
     return data
 
+def download_zipfile(file_path, url, file_dir):
+    """Downloads a zip file from a url and writes into specified path.
+
+    The function checks if the path to the zip file exists. If the path
+    exists, then the function reads the file; otherwise the function
+    downloads and extracts the file.
+
+    Parameters
+    ----------
+    file_path : str
+       Relative path to file within zip file.
+    url : str
+       A URL to fetch the file.
+    fire_dir : str
+       Relative path to directory to extract zip file.
+
+    Returns
+    -------
+    data : bytes
+       Downloaded data file.
+    """
+    if not os.path.exists(file_dir):
+        # Download and unzip file
+        r = requests.get(url)
+        z = zipfile.ZipFile(io.BytesIO(r.content))
+        z.extractall(file_dir)
+        with open(file_path, 'rb') as data_file:
+            data = data_file.read()
+    else:
+        # Read fire boundary
+        with open(file_path, 'rb') as data_file:
+            data = data_file.read()
+    return data
+
 def calc_norm_diff(band1, band2):
     """Calculates the normalized difference using two reflectance bands.
 
@@ -61,6 +97,34 @@ def calc_norm_diff(band1, band2):
         return norm_diff
     else:
         raise ValueError('Band 1 does not have the same shape as Band 2.')
+
+def calc_msavi(band1, band2):
+    """Calculates a modified soil adjusted vegetation index.
+
+    Band 1 is the near-infrared band, and Band 2 is the red band. The
+    MSAVI equation has been expanded for ease of computation.
+
+    Parameters
+    ----------
+    band1 : numpy.ndarray
+       A near-infrared reflectance band.
+    band2 : numpy.ndarray
+       A red reflectance band.
+    Returns
+    -------
+    msavi : numpy.ndarray
+       A band array containing the modified soil adjusted vegetation
+       index values.
+    """
+    if band1.shape == band2.shape:
+        msavi = band1 + 0.5 - 0.5 * np.sqrt((
+            4 * band1 * band1) - (
+            4 * band1) + (
+            8 * band2) + 1)
+        return msavi
+    else:
+        raise ValueError(
+            'Band 1 does not have the same shape as Band 2.')
 
 def aop_h5refl2array(refl_filename):
     """Reads in a hdf5 file and returns an array and select metadata.
