@@ -26,12 +26,21 @@ $ conda activate earth-analytics-neon
 ```
 
 # Tools and Packages Used
+* io
 * os
+* glob
+* sys
+* warnings
+* zipfile
 * matplotlib
 * numpy
+* pandas
 * requests
 * h5py
 * geopandas
+* rasterio
+* rioxarray
+* xarray
 * earthpy
 * folium
 
