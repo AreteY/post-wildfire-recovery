@@ -56,30 +56,26 @@ $ jupyter nbconvert --to html --TemplateExporter.exclude_input=True post_wildfir
 
 # Data Sources
 ## Raster data
-1. [NEON LiDAR Ecosystem Structure](https://data.neonscience.org/data-products/DP3.30015.001)
-* **Reference**: National Ecological Observatory Network. 2022. Data Product DP3.30015.001, Ecosystem structure. Provisional data downloaded from https://data.neonscience.org on March 31, 2022. Battelle, Boulder, CO, USA NEON. 2022.
-2. [NEON Spectrometer Reflectance](https://data.neonscience.org/data-products/DP1.30006.001)
-* **Reference:** National Ecological Observatory Network. Spectrometer orthorectified surface directional reflectance - mosaic (DP3.30006.001), RELEASE-2022. https://doi.org/10.48443/5er3-8n49. Dataset accessed from https://data.neonscience.org on April 15, 2022
-3. [NEON LiDAR Elevation Digital Terrain Model](https://data.neonscience.org/data-products/DP3.30024.001)  
-* **Reference:** National Ecological Observatory Network. Elevation - LiDAR (DP3.30024.001), RELEASE-2022. https://doi.org/10.48443/ymmp-fr93. Dataset accessed from https://data.neonscience.org on April 18, 2022
-4. [LandFire Biophysical Setting and Vegetation Departure Grids. ](https://landfire.gov/index.php)
-* **Reference:** LANDFIRE: LANDFIRE Remap 2016 Biophysical Settings (BPS) CONUS layer.(2020, October - last update). U.S. Department of Interior, Geological Survey, and U.S. Department of Agriculture. Available: https://landfire.gov/bps.php. Data accessed April 3, 2022.
-* **Reference:** LANDFIRE: LANDFIRE Remap 2016 Vegetation Departure grid (VDEP) CONUS layer.(2020, October - last update). U.S. Department of Interior, Geological Survey, and U.S. Department of Agriculture. Available: https://landfire.gov/vdep.php. Data accessed April 3, 2022.
+1. [NEON Spectrometer Reflectance](https://data.neonscience.org/data-products/DP1.30006.001)
+* **Reference:** National Ecological Observatory Network. Spectrometer orthorectified surface directional reflectance - mosaic (DP3.30006.001), RELEASE-2022. https://doi.org/10.48443/5er3-8n49. Dataset accessed from https://data.neonscience.org on April 15, 2022.
+2. [Landsat 8 Surface Reflectance](https://www.usgs.gov/landsat-missions)
+* **Reference:** Landsat Level-2 Surface Reflectance Science Product, courtesy of the U.S. Geological Survey.
+Vermote, E., Justice, C., Claverie, M., & Franch, B. (2016). Preliminary analysis of the performance of the Landsat 8/OLI land surface reflectance product. Remote Sensing of Environment. http://dx.doi.org/10.1016/j.rse.2016.04.008.
+Dataset accessed from https://earthexplorer.usgs.gov on June 6, 2022.
 
 ## Vector data
-5. Chimney Tops 2 Fire Perimeter
+3. Chimney Tops 2 Fire Perimeter
 * **Reference:** MTBS Data Access: Fire Level Geospatial Data. (2022, February - last revised). MTBS Project (USDA Forest Service/U.S. Geological Survey). Available: https://mtbs.gov/direct-download. Data accessed April 3, 2022.
 * Available for download in this repository as [Release v1.0.0](https://github.com/AreteY/post-wildfire-recovery/releases) `chimtops2-boundary`
-6. Great Smoky Mountains National Park Perimeter
+4. Great Smoky Mountains National Park Perimeter
 * **Reference:** National Park Service- Land Resources Division. Great Smoky Mountains National Park Boundary. (December 30, 2019 - last revised). Available: https://grsm-nps.opendata.arcgis.com. Data accessed March 28, 2022.
 * Available for download in this repository as [Release v1.0.1](https://github.com/AreteY/post-wildfire-recovery/releases) `grsm-boundary`
-
-## Time-series data
-7. [Remote Automated Weather Station (RAWS) data for Indian Grave RAWS Site](https://raws.dri.edu/cgi-bin/rawMAIN.pl?laTIND).
-* **Reference:** Indian Grave RAWS hourly data for November 2016. U.S. Forest Service Fire and Aviation Management Information Technology Portal. 2022. FW13 hourly station data (station ID:407603). Downloaded from https://famit.nwcg.gov/applications/FAMWeb on April 16, 2022.
+5. NEON Terrestrial Observation System Sampling Locations
+* **Reference:** NEON Document Library: Spatial Data. (June 29, 2020 - last revised). Available: https://data.neonscience.org/documents. Data accessed April 18, 2022.
+* Available for download in this repository as [Release v1.0.2](https://github.com/AreteY/post-wildfire-recovery/releases) `neon-tos-plot-centroids`
 
 ## Tabular data
-8. [NEON Plant Presence and Percent Cover](https://data.neonscience.org/data-products/DP1.10058.001)
+6. [NEON Plant Presence and Percent Cover](https://data.neonscience.org/data-products/DP1.10058.001)
 * **Reference:** NEON (National Ecological Observatory Network). Plant presence and percent cover (DP1.10058.001), RELEASE-2022. https://doi.org/10.48443/pr5e-1q60. Dataset accessed from https://data.neonscience.org on April 18, 2022.
 
 # Project Workflow
