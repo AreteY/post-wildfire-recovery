@@ -38,6 +38,7 @@ $ conda activate earth-analytics-neon
 * requests
 * h5py
 * geopandas
+* shapely
 * rasterio
 * rioxarray
 * xarray
