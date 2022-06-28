@@ -130,8 +130,12 @@ def aop_h5refl2array(refl_filename):
     """Reads in a hdf5 file and returns an array and select metadata.
 
     This function is defined for the NEON AOP Reflectance hdf5 file
-    format and is adapted from the NEON Tutorial "Plot a Spectral
-    Signature in Python - Tiled Data".
+    format and is adapted from the reference: Hass B, O'Leary D, NEON
+    (National Ecological Observatory Network). Data Tutorial: Band
+    Stacking, RGB & False Color Images, and Interactive Widgets in
+    Python - Flightline Data. 'https://www.neonscience.org/resources/'
+    'learning-hub/tutorials/neon-hsi-aop-functions-python' (accessed
+    11 April 2022).
 
     Parameters
     ----------
@@ -220,9 +224,12 @@ def subset_clean_band(refl_array,metadata,band_number):
     """Extracts and cleans a reflectance band.
 
     The band is cleaned by applying the no data value and scale factor
-    from the metadata dictionary. Adapted from the NEON Tutorial "Band
-    Stacking, RGB & False Color Images, and Interactive Widgets in
-    Python - Flightline Data".
+    from the metadata dictionary. Adapted from the reference: Hass B,
+    O'Leary D, NEON (National Ecological Observatory Network). Data
+    Tutorial: Band Stacking, RGB & False Color Images, and Interactive
+    Widgets in Python - Flightline Data. 'https://www.neonscience.org/'
+    'resources/learning-hub/tutorials/neon-hsi-aop-functions-python'
+    (accessed 11 April 2022).
 
     Parameters
     ----------
@@ -249,6 +256,12 @@ def subset_clean_band(refl_array,metadata,band_number):
 
 def stack_subset_bands(refl_array, metadata, bands):
     """Subsets, cleans, and stacks bands from a reflectance array.
+    Adapted from the reference: Hass B, O'Leary D, NEON (National
+    Ecological Observatory Network). Data Tutorial: Band Stacking,
+    RGB & False Color Images, and Interactive Widgets in Python -
+    Flightline Data. 'https://www.neonscience.org/resources/'
+    'learning-hub/tutorials/neon-hsi-aop-functions-python' (accessed
+    11 April 2022).
 
     Parameters
     ----------
