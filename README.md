@@ -6,7 +6,7 @@ This is an [Earth Lab](https://earthlab.colorado.edu) Certificate project by [He
 # Project Motivation and Goal
 * Wildland fire is a multifaceted natural phenomenon of increasing importance to both human and ecological communities. In this project, we explore the post-wildfire recovery for the [2016 Chimney Tops 2 Fire](https://www.nps.gov/grsm/learn/chimney-tops-2-fire.htm) by spatially quantifying the vegetation recovery using hyperspectral reflectance data.
 * This project highlights how high spatial resolution (1-meter) remote sensing measurements, such as hyperspectral reflectance data, can be used to study fire recovery on the order of the spatial variation on the ground.
-* In this repository, we include [example notebooks](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) that process and analyze hyperspectral reflectance data to assess post-wildfire recovery.
+* In this repository, we include [example notebooks](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) that process and analyze reflectance data and percent ground coverage data to assess post-wildfire recovery.
 
 # Project Environment
 To run our project workflow, clone this repository:
@@ -97,7 +97,7 @@ $ conda activate earth-analytics-neon
 $ cd notebooks
 $ jupyter notebook vegetation_indices.ipynb
 ```
-* All data used in this workflow is accessible. Please see the [notebooks]((https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks)) for details.
+* All data used in this workflow is accessible. Please see the [notebooks](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) for details.
 
 # Example Usage
 * The vegetation indices of any NEON Airborne Observation Platform Hyperspectral Reflectance hdf5 file can be calculated using [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) `vegetation_indices.ipynb`. This could include the [NEON spectrometer orthorectified surface directional reflectance - mosaic data product](https://data.neonscience.org/data-products/DP3.30006.001) used in this workflow and the [NEON spectrometer orthorectified surface directional reflectance - flightline](https://data.neonscience.org/data-products/DP1.30006.001) data product.
