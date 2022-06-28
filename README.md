@@ -108,5 +108,13 @@ The post-wildfire-recovery project is under the [MIT License](https://github.com
 
 # Citation
 ```
-@software{Yoon_Post-Wildfire_Recovery_2021,author = {Yoon, Y. Heidi and Ilangakoon, Nayani},doi = {10.5281/zenodo.6574445},month = {5},title = {{Post-Wildfire Recovery}},url = {https://github.com/AreteY/post-wildfire-recovery},version = {1.1.0},year = {2021}}
+@software{Yoon_Post-Wildfire_Recovery_2021,
+  author = {Yoon, Y. Heidi and Ilangakoon, Nayani},
+  doi = {10.5281/zenodo.6574445},
+  month = {5},
+  title = {{Post-Wildfire Recovery}},
+  url = {https://github.com/AreteY/post-wildfire-recovery},
+  version = {1.1.0},
+  year = {2021}
+}
 ```
