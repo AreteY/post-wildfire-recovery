@@ -65,7 +65,7 @@ Dataset accessed from https://earthexplorer.usgs.gov on June 6, 2022.
 4. Great Smoky Mountains National Park Perimeter
 * **Reference:** National Park Service- Land Resources Division. Great Smoky Mountains National Park Boundary. (December 30, 2019 - last revised). Available: https://grsm-nps.opendata.arcgis.com. Data accessed March 28, 2022.
 * Available for download in this repository as [Release v1.0.1](https://github.com/AreteY/post-wildfire-recovery/releases) `grsm-boundary`
-5. NEON Terrestrial Observation System Sampling Locations
+5. [NEON Terrestrial Observation System Sampling Locations](https://www.neonscience.org/data-collection/terrestrial-plants)
 * **Reference:** NEON Document Library: Spatial Data. (June 29, 2020 - last revised). Available: https://data.neonscience.org/documents. Data accessed April 18, 2022.
 * Available for download in this repository as [Release v1.0.2](https://github.com/AreteY/post-wildfire-recovery/releases) `neon-tos-plot-centroids`
 
@@ -97,8 +97,8 @@ $ jupyter notebook vegetation_indices.ipynb
 * The vegetation indices of any NEON Airborne Observation Platform Hyperspectral Reflectance hdf5 file can be calculated using [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) `vegetation_indices.ipynb`. This could include the [NEON spectrometer orthorectified surface directional reflectance - mosaic data product](https://data.neonscience.org/data-products/DP3.30006.001) used in this workflow and the [NEON spectrometer orthorectified surface directional reflectance - flightline](https://data.neonscience.org/data-products/DP1.30006.001) data product.
 * The vegetation indices of any [Landsat 8 scene with surface reflectance](https://earthexplorer.usgs.gov) that overlaps a fire boundary (shapefile) can be calculated using [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) `landsat_vegetation.ipynb`.
 * Any xarray.DataArray can be cropped to a 1-km<sup>2</sup> area in UTM coordinates using [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) `landsat_vegetation.ipynb`.
-* The overlap of any fire boundary (shapefile) and any NEON Terrestrial Observation System sampling location can be determined using [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) `vegetation_subplots.ipynb`.
-* The reflectance spectrum for any location in UTM coordinates for any NEON Airborne Observation Platform Hyperspectral Reflectance hdf5 file can be determined using [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) `vegetation_spectra.ipynb`.
+* The overlap of any fire boundary (shapefile) and any NEON Terrestrial Observation System sampling location (shapefile) can be determined using [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) `vegetation_subplots.ipynb`. This could include other fires from the United States from 1984 to present available from the [MTBS project](https://www.mtbs.gov/direct-download) and [other NEON Terrestrial locations and other plant data products](https://www.neonscience.org/data-collection/terrestrial-plants) of interest.
+* The reflectance spectrum for any location in UTM coordinates for any NEON Airborne Observation Platform Hyperspectral Reflectance hdf5 file can be determined using [notebook](https://github.com/AreteY/post-wildfire-recovery/tree/main/notebooks) `vegetation_spectra.ipynb`. This could include the [NEON spectrometer orthorectified surface directional reflectance - mosaic data product](https://data.neonscience.org/data-products/DP3.30006.001) used in this workflow and the [NEON spectrometer orthorectified surface directional reflectance - flightline](https://data.neonscience.org/data-products/DP1.30006.001) data product.
 
 # License
 The post-wildfire-recovery project is under the [MIT License](https://github.com/AreteY/post-wildfire-recovery/blob/main/LICENSE.md).
