@@ -26,12 +26,6 @@ $ conda activate earth-analytics-neon
 ```
 
 # Tools and Packages Used
-* io
-* os
-* glob
-* sys
-* warnings
-* zipfile
 * matplotlib
 * numpy
 * pandas
@@ -46,7 +40,7 @@ $ conda activate earth-analytics-neon
 * folium
 
 # Project Background
-To learn more about the Chimney Tops 2 Fire and the motivation for this project, please see our blog post `post_wildfire_blog.ipynb` notebook and the fire progression figure in the [Reports folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/reports) and the [Graphics folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/graphics) (`fire_progression.png`), respectively.
+To learn more about the Chimney Tops 2 Fire and the motivation for this project, please see our blog post `post_wildfire_blog.ipynb` notebook and the fire progression figure in the [Reports folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/reports) and the [Graphics folder](https://github.com/AreteY/post-wildfire-recovery/tree/main/graphics) (`fire_progression.png` and `grsm_fire_map.png`), respectively.
 
 To create the final `post_wildfire_blog.html` output, start the project environment and make sure you are in the `reports` directory within `post-wildfire-recovery`. Then run jupyter nbconvert for the `post_wildfire_blog.html` output.
 ```
