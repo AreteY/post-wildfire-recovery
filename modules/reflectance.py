@@ -3,6 +3,7 @@ import os
 import requests
 import zipfile
 import numpy as np
+import pandas as pd
 import h5py
 
 def download_file(file_path, url):
@@ -298,3 +299,31 @@ def stack_subset_bands(refl_array, metadata, bands):
         stacked_array[...,i] = band_dict[band_names[i]]
 
     return stacked_array
+
+def clean_refl_spectrum(refl_wavelength):
+    """Clean reflectance spectrum for water absorption and noisy data.
+
+    Water absorption lines within range of the NEON Imaging Spectrometer
+    and last ten points are replaced by NaN values to clean data.
+
+    Parameters
+    ----------
+    refl_wavelength : pandas.Series
+       Wavelength values for a NEON reflectance spectrum.
+
+    Returns
+    -------
+    clean_data : pandas.Series
+        Cleaned wavelength values.
+    """
+    # Range of values for water absorption
+    w1 = [1340, 1445]
+    w2 = [1790, 1955]
+    clean_data = refl_wavelength
+    # Clean data for water absorption
+    clean_data[
+        ((clean_data >= w1[0]) & (clean_data <= w1[1])) | (
+            (clean_data >= w2[0]) & (clean_data <= w2[1]))]=np.nan
+    # Clean last 10 points for noisy data
+    clean_data[-10:] = np.nan
+    return clean_data    
