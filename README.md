@@ -51,7 +51,7 @@ $ jupyter nbconvert --to html --TemplateExporter.exclude_input=True post_wildfir
 
 # Data Sources
 ## Raster data
-1. [NEON Spectrometer Reflectance](https://data.neonscience.org/data-products/DP1.30006.001)
+1. [NEON Spectrometer Reflectance](https://data.neonscience.org/data-products/DP3.30006.001)
 * **Reference:** National Ecological Observatory Network. Spectrometer orthorectified surface directional reflectance - mosaic (DP3.30006.001), RELEASE-2022. https://doi.org/10.48443/5er3-8n49. Dataset accessed from https://data.neonscience.org on April 15, 2022.
 2. [Landsat 8 Surface Reflectance](https://www.usgs.gov/landsat-missions)
 * **Reference:** Landsat Level-2 Surface Reflectance Science Product, courtesy of the U.S. Geological Survey.
